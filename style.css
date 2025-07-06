@@ -96,15 +96,24 @@ nav>ul {
 }
 
 nav li {
+    display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 nav li>a {
+    display:flex;
     background-color: var(--favorite-color);
     box-shadow: var(--accent-color) 4px 4px;
-    padding: .5em 3em;
+    /* padding: .5em 3em; /*
     /* this takes away the link underline */
     text-decoration: none;
+    justify-content: center;
+    align-content:space-evenly;
+    margin: 10px;
+    max-width: 175px;
+    flex: 1;
+    
 }
 
 nav li>a:hover {
@@ -117,6 +126,7 @@ a {
     text-shadow: var(--bg-color) 1px 1px 2px;
     font-weight: bold;
     transition: background-color 400ms ease-out;
+   
 }
 
 a:visited {
@@ -246,6 +256,9 @@ footer {
         margin: .4em;
     }
 
+   
+
+
     nav>ul {
         /* this stuff makes it wrap around on mobile */
         display: flex;
@@ -253,12 +266,18 @@ footer {
         flex-direction: row;
     }
 
+    nav li>a {
+        display: flex;
+        justify-content: center;
+        margin: 10px;
+        flex:auto;  
+    }
     #avatar {
         margin: 0 1em;
     }
 
     #bio {
-        width: 50%;
+        width: 80%;
     }
 
     main {
@@ -271,15 +290,21 @@ footer {
     }
 
     #sidebar ul {
-        margin: 0 1em;
         display: flex;
         flex-wrap: wrap;
-        line-height: 2em;
+        justify-content: center;    
+        margin: 5px;
+        min-width: 200px;
+        font-size: larger;
+    
     }
 
     #sidebar li {
-        padding-left: 0;
-        margin: .3em 1em;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 5px;
+        min-width: 200px;   
     }
 
     footer {
@@ -308,7 +333,7 @@ div.gallery {
     justify-content: space-between;
     align-content: space-between;
 
-}
+}   
 
 div.gallery:hover {
     transform: scale(1.5);

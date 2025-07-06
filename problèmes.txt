@@ -3,27 +3,6 @@ Problèmes à résoudre :
 
 - Général
 
-Trouver comment faire des liens qui amènent à un endroit de la page sur laquelle on est. # peut-être ? 
-
-
-
-- Navigation
-
-Avoir des boutons de taille fixe
-Avoir une navigation sur une page quand c'est pertinent
-
-
-- Galerie
-
-Faire un carrousel pour faire défiler les photos
-Rendre responsive l'affichage sur mobile 
-	en mettant le carrousel uniquement 
-	ou en mettant les photos en une colonne uniquement 
-
-- Formulaire
-
-Comment intégrer un formulaire au site pour que ce soit joli et pratique et que je le reçoive par email ? 
-
 
 
 
@@ -31,16 +10,7 @@ Comment intégrer un formulaire au site pour que ce soit joli et pratique et que
 
 Problèmes réglés et solutions
 
-- Rendre plus joli la taille sur smartphone du h1 main galerie
-Dans css @media il n'y avait que header > main qui changeait le h1, il fallait créer un main > h1. 
-Il semble que x > y signifie que ça ne s'applique qu'au y contenu dans l'objet x 	
 
-
--Titre du site header centré vertical et avec de l'espace entre la bordure et le texte horizontalement 
-Dans css (qui est surprise ?) header ajouter un display flex et un align-items center, mettre max width 100%
-dans header > h1 padding 12px (haut bas) 100px (côtés)
-(créée un problème, en vue smartphone le titre n'est plus centré mais aligné à gauche : 
-dans @media header ajouter un display flex, flex-wrap wrap, justify-content center et align-items center)
 
 
 
