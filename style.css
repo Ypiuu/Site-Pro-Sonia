@@ -33,7 +33,11 @@
 
 body {
     background-color: var(--bg-color2);
-    margin: 0;
+    margin: 0;  
+}
+
+.corps{
+    width: 800px;
 }
 
 /* i think having better line spacing helps text to be more readable, but you can remove it if you want */
@@ -147,9 +151,11 @@ ul {
     /* made the stripe bg with a generator:
     https://stripesgenerator.com/
      */
+    
     background-image: linear-gradient(45deg, var(--stripe-color) 25%, var(--stripe-color2) 25%, var(--stripe-color2) 50%, var(--stripe-color) 50%, var(--stripe-color) 75%, var(--stripe-color2) 75%, var(--stripe-color2) 100%);
     background-size: 65.05px 65.05px;
-    min-width: 220px;
+    min-width: 250px;
+    max-width: 250px;
     margin: 1em;
     padding: 1em;
     border: 2px solid var(--text-color);
@@ -196,7 +202,7 @@ main {
     margin: 1em;
     border: 2px solid var(--text-color);
     box-shadow: var(--accent-color) 4px 4px;
-    text-shadow: var(--bg-color2) 1px 1px 3px;
+    text-shadow: var(--bg-color2) 1px 1px 3px;  
 
     * {
         box-sizing: border-box;
@@ -211,6 +217,7 @@ main>h3 {
     border-radius: .4em;
     padding: .2em .5em;
     text-shadow: var(--bg-color2) 1px 1px 3px;
+    max-width: 100%;
 }
 
 /* a class for centering text and images */
@@ -231,9 +238,11 @@ footer {
 /* these are the mobile styles! */
 @media only screen and (max-width: 800px) {
     #content {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
-
+    
     #sidebar {
         width: 100%;
         display: flex;
@@ -244,7 +253,7 @@ footer {
     }
 
     header {
-        min-height: 160px;
+        min-height: 100px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -262,6 +271,7 @@ footer {
     nav>ul {
         /* this stuff makes it wrap around on mobile */
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         flex-direction: row;
     }
@@ -281,7 +291,9 @@ footer {
     }
 
     main {
+        
         margin: 0 1em;
+       
     }
 
     main>h1 {
