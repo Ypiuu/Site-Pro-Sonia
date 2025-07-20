@@ -34,7 +34,6 @@
 body {
     background-color: var(--bg-color2);
     margin: 0;
-    font-size: 1.2em;
 }
 
 .corps {
@@ -47,7 +46,6 @@ p {
 }
 
 header {
-    position: sticky
     background-color: var(--accent-color);
     /* you can add the image url in :root (at the top) if you want */
     background: var(--header-bg);
@@ -81,111 +79,6 @@ header>h1 {
 
 
 }
-
-/* Menu hamburger dynamique ?
-pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme transition */
-
-
-
-a {
-    transition: 200ms;
-}
-
-#menuToggle {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 22%;
-    left: 50%;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-
-}
-
-#menuToggle input {
-
-    display: flex;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-    
-
-}
-
-#menuToggle span {
-    display: flex;
-    width: 29px;
-    height: 2px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #c3385b;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 5px 0px;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-        opacity 0.55s ease;
-
-}
-
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-
-}
-
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-3px, -1px);
-    background:#c3385b;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3) {
-
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2) {
-    transform: rotate(-45deg) translate(0, -1px);
-
-}
-
-#menu {
-    position: relative;
-    width: 300px;
-    height: 300px; 
-    box-shadow: 0 0 10px #4e1b3e;
-    margin: -20% 0% 0% -50%;
-    padding: 33px;
-    padding-top: 60px;
-    background-color:#fdb3cc;
-    -webkit-font-smoothing : antialiased ; 
-    transform-origin: 0% 0%;
-    transform: translate(-200%, 0%);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05,);
-
-}
-
-#menu li {
-    
-    transition-delay: 2s;
-}
-
-#menuToggle input:checked ~ ul {
-    transform: none;
-}
-
-
-
-
 
 nav {
     padding: 1em;
@@ -240,8 +133,6 @@ a {
 
 }
 
-
-
 a:visited {
     color: var(--text-color);
 }
@@ -265,7 +156,6 @@ ul {
     background-size: 65.05px 65.05px;
     min-width: 250px;
     max-width: 250px;
-    max-height: 800px;
     margin: 1em;
     padding: 1em;
     border: 2px solid var(--text-color);
@@ -294,7 +184,6 @@ ul {
     border: 2px solid var(--text-color);
     box-shadow: var(--accent-color) 4px 4px;
     text-shadow: var(--bg-color2) 0 0 2px;
-    font-size: 0.9em;
 }
 
 #bio p {
@@ -346,32 +235,49 @@ footer {
     max-width: 960px;
 }
 
-/* these are the mobile styles! */
+label, #toggle
+{
+    display: none;
+}
 
+
+
+
+/*ESPACE POUR LA RESPONSIVNESS*/
+
+
+
+/* these are the mobile styles! */
 @media only screen and (max-width: 800px) {
     #content {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
     }
 
+
     #sidebar {
-        width: 120%;
-        max-width: 120%;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         border: none;
-        max-height: 100%;
+        max-width: 100%;
+    }
+
+    #titre {
+        position: sticky;
     }
 
     header {
         min-height: 100px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
+        
     }
 
     header>h1 {
@@ -379,6 +285,12 @@ footer {
         margin: .4em;
     }
 
+    header>nav {
+        display: flex;
+        flex-wrap: wrap;
+        
+
+    }
 
 
 
@@ -399,12 +311,13 @@ footer {
 
     #avatar {
         margin: 0 1em;
-
-
+       
     }
 
     #bio {
-        width: 80%;
+        display: none;
+        width: 100%;
+    
     }
 
     main {
@@ -448,8 +361,45 @@ footer {
     }
 
 
+    nav
+    {
+        display: flex;
+        flex-direction: column;
+    }
+ 
+    nav .main_pages 
+    {
+        display: none;
+    }
+ 
+    label 
+    {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+
+    #toggle:checked + .main_pages 
+    {
+        display: flex;
+    }
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
