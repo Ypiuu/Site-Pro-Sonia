@@ -82,7 +82,10 @@ header>h1 {
 
 }
 
-
+/*enlève le soulignement des liens titres*/
+body>h2,a {
+text-decoration: none;
+}
 
 
 
@@ -247,6 +250,11 @@ footer {
     max-width: 960px;
 }
 
+.map {
+    min-width: 100%;
+    min-height: 300px;
+}
+
 /* these are the mobile styles! */
 
 @media only screen and (max-width: 800px) {
@@ -256,6 +264,9 @@ footer {
         justify-content: center;
     }
 
+    main>h2 {
+        font-size: 1.2em;
+    }
     #sidebar {
         width: 120%;
         max-width: 120%;
@@ -280,8 +291,13 @@ footer {
         margin: .4em;
     }
 
-
-
+    .map {
+    min-width: 100%;
+    min-height: 100%;
+}
+  .computeronly {
+    display: none;
+  }
 
     nav>ul {
         /* this stuff makes it wrap around on mobile */
