@@ -278,15 +278,11 @@ footer {
         justify-content: center;
     }
 
-    .sidebarsticky {
-        position: relative;
-    }
+  
 
     main>h2 {
         font-size: 1.2em;
     }
-
-
 
 
     header {
@@ -295,6 +291,7 @@ footer {
         min-height: 120px;
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
@@ -333,18 +330,19 @@ footer {
         display: flex;
         justify-content: center;
         margin: 10px;
-        flex: auto;
+        
     }
-
+/*
     #avatar {
         margin: 0 1em;
 
-
     }
-
+        */
+/*
     #bio {
         width: 80%;
     }
+        */
 
     main {
 
@@ -357,6 +355,7 @@ footer {
         margin: .2em;
     }
 
+/*
     #sidebar ul {
         display: flex;
         flex-wrap: wrap;
@@ -374,7 +373,7 @@ footer {
         margin: 5px;
         min-width: 200px;
     }
-
+*/
     footer {
         margin: 1em;
     }
@@ -399,7 +398,6 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         display: flex;
         flex-direction: column;
         position: absolute;
-    
         top: 25%;
         left: 33%;
         z-index: 1;
@@ -408,6 +406,9 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
 
     }
 
+
+
+/*la hitbox du bouton*/
     #menuToggle input {
 
         display: flex;
@@ -427,7 +428,6 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
     #menuToggle span {
         display: flex;
         justify-content: center;
-        align-items: center;
         width: 29px;
         height: 2px;
         margin-bottom: 5px;
@@ -469,19 +469,23 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
     }
 
     #menu {
-       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: linear-gradient(45deg, var(--stripe-color) 25%, var(--stripe-color2) 25%, var(--stripe-color2) 50%, var(--stripe-color) 50%, var(--stripe-color) 75%, var(--stripe-color2) 75%, var(--stripe-color2) 100%);
+        background-size: 65.05px 65.05px;
         position: relative;
-        width: 300px;
-        height: 300px;
+        top: 0;
+        width: 350px;
+        height: 275px;
         box-shadow: 0 0 10px #4e1b3e;
-        margin: -20% 0% 0% -50%;
+        margin: -10% 0% 0% -47%;
         padding: 20px;
-        padding-top: 50px;
-        background-color: #fdb3cc;
-        -webkit-font-smoothing: antialiased;
+        padding-top: 20px;
         transform-origin: 0% 0%;
         transform: translate(-200%, 0%);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, );
+        font-size: large;
 
     }
 
@@ -490,6 +494,7 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         transition-delay: 2s;
     }
 
+    
     #menuToggle input:checked~ul {
         transform: none;
     }
