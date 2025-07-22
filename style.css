@@ -11,7 +11,11 @@
     /* you can change the stripe colors easily from here */
     --stripe-color: #ffc4d8;
     --stripe-color2: #feb5d0;
+    scroll-behavior: smooth;
+    
 }
+
+
 
 /* you can get hex codes from sites like this:
    https://palettes.shecodes.io/    
@@ -178,7 +182,7 @@ ul {
     background-size: 65.05px 65.05px;
     min-width: 250px;
     max-width: 250px;
-    max-height: 800px;
+    max-height: 600px;
     margin: 1em;
     padding: 1em;
     border: 2px solid var(--text-color);
@@ -268,6 +272,23 @@ footer {
     min-width: 100%;
     min-height: 300px;
 }
+
+/*anchor links pour naviguer dans la page proprement*/
+
+#contactinfo {
+    scroll-margin-top:15px;
+}
+
+#formulaire {
+    scroll-margin-top: 15px;
+}
+
+
+
+
+
+
+
 
 /* these are the mobile styles! */
 
@@ -520,6 +541,23 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         box-shadow: var(--accent-color) 4px 4px;
 
     }
+
+/*anchor links pour naviguer dans la page proprement*/
+
+#contactinfo {
+    scroll-margin-top:170px;
+}
+
+#formulaire {
+    scroll-margin-top: 170px;
+}
+
+
+
+
+
+
+
 
 
     .mediaonly {
