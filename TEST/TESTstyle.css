@@ -12,7 +12,7 @@
     --stripe-color: #ffc4d8;
     --stripe-color2: #feb5d0;
     scroll-behavior: smooth;
-    
+
 }
 
 
@@ -276,7 +276,7 @@ footer {
 /*anchor links pour naviguer dans la page proprement*/
 
 #contactinfo {
-    scroll-margin-top:15px;
+    scroll-margin-top: 15px;
 }
 
 #formulaire {
@@ -284,33 +284,32 @@ footer {
 }
 
 
-/*MODAL*/
+/* /*MODAL
 
-/*modal background*/
+//* *modal background
 .modal {
-    display: none; /*hidden by default*/
-    position: fixed; /*reste fixe*/
-    z-index: 3; /*reste au-dessus des autres éléments*/
+    display: none; /*hidden by default
+    position: fixed; /*reste fixe
+    z-index: 3; /*reste au-dessus des autres éléments
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto; /*enable scroll si besoin*/
-    background-color:rgb(0,0,0); /*fallback color*/
-    background-color: rgba(0,0,0,0.4); /*black w/ opacity*/
+    overflow: auto; /*enable scroll si besoin
+    background-color:rgb(0,0,0); /*fallback color
+    background-color: rgba(0,0,0,0.4); /*black w/ opacity
+    }*/
 
-}
-
-/*modal content/box*/
+/*modal content/box
 .modal-content{
     background-color: #fefefe;
-    margin: 15% auto; /*15% from the top and centered*/
+    margin: 15% auto; /*15% from the top and centered
     padding: 20px;
     border: 1px solid #999;
     width: 80%;
-}
+} */
 
-/*close button*/
+/*close button
 .close {
     color: #aaa;
     float: right;
@@ -324,6 +323,99 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+ */
+
+
+
+
+
+
+
+
+
+
+
+/* pour la galerie */
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* pour la lightbox */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+.lightbox .close {
+    top: 20px;
+    right: 20px;
+
+}
+
+.lightbox .prev {
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+.lightbox .next {
+    right: 20px;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+
+
+
+
+
 
 
 
@@ -342,7 +434,7 @@ footer {
         justify-content: center;
     }
 
-  
+
 
     main>h2 {
         font-size: 1.2em;
@@ -394,15 +486,16 @@ footer {
         display: flex;
         justify-content: center;
         margin: 10px;
-        
+
     }
-/*
+
+    /*
     #avatar {
         margin: 0 1em;
 
     }
         */
-/*
+    /*
     #bio {
         width: 80%;
     }
@@ -419,7 +512,7 @@ footer {
         margin: .2em;
     }
 
-/*
+    /*
     #sidebar ul {
         display: flex;
         flex-wrap: wrap;
@@ -472,7 +565,7 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
 
 
 
-/*la hitbox du bouton*/
+    /*la hitbox du bouton*/
     #menuToggle input {
 
         display: flex;
@@ -557,16 +650,14 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         transition-delay: 2s;
     }
 
-    
+
     #menuToggle input:checked~ul {
         transform: none;
     }
 
-/*Faire disparaître le menu quand on clique sur un lien*/
+    /*Faire disparaître le menu quand on clique sur un lien*/
 
-.menugone {
-    
-}
+    .menugone {}
 
 
 
@@ -594,15 +685,15 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
 
     }
 
-/*anchor links pour naviguer dans la page proprement*/
+    /*anchor links pour naviguer dans la page proprement*/
 
-#contactinfo {
-    scroll-margin-top:170px;
-}
+    #contactinfo {
+        scroll-margin-top: 170px;
+    }
 
-#formulaire {
-    scroll-margin-top: 170px;
-}
+    #formulaire {
+        scroll-margin-top: 170px;
+    }
 
 
 
@@ -616,49 +707,19 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         display: flex;
     }
 
-}
+
+
+    /*galerie media only*/
+
+    .gallery img {
+        max-width: 100px;
+    }
+
+    .lightbox img {
+        max-width: 95%;
+    }
 
 
 
 
-
-/* pour la galerie */
-
-div.gallery {
-    border: 5px solid var(--favorite-color);
-    justify-content: space-between;
-    align-content: space-between;
-
-}
-
-div.gallery:hover {
-    transform: scale(1.5);
-    /* this scales up the image when you hover over it */
-    object-fit: contain;
-    /* this keeps the aspect ratio of the original images*/
-
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 10px;
-    text-align: center;
-}
-
-
-
-.responsive {
-    padding: px 2px;
-    float: left;
-    width: 24.99999%;
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
 }
