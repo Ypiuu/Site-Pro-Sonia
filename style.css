@@ -87,8 +87,7 @@ header>h1 {
 }
 
 /*enlève le soulignement des liens titres*/
-body>h2,
-a {
+body>h2 {
     text-decoration: none;
 }
 
@@ -140,6 +139,7 @@ nav li>a:hover {
 }
 
 a {
+    text-decoration: none;
     color: var(--link-color);
     border-radius: .3em;
     text-shadow: var(--bg-color) 1px 1px 2px;
@@ -286,6 +286,91 @@ footer {
 
 
 
+/* pour la galerie */
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* pour la lightbox */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#c2f9ff;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+.lightbox .close,
+.lightbox .prev,
+.lightbox .next {
+    position:absolute;
+    font-size: 30px;
+    color:#e27e97;
+    cursor: pointer;
+    background-color:rgba(245, 245, 245, 0.811);
+
+    border: none;
+    font-weight: bold;
+}
+
+.lightbox .close {
+    top: 20px;
+    right: 20px;
+
+}
+
+.lightbox .prev {
+
+    left: 20px;
+    top: 50%;
+    transform: translate(50%);
+}
+
+.lightbox .next {
+    
+    right: 20px;
+    top: 50%;
+    transform: translate(-50%);
+}
+
+
+
+
+
 
 
 
@@ -306,6 +391,7 @@ footer {
         font-size: 1.2em;
     }
 
+ 
 
     header {
         position: sticky;
@@ -395,7 +481,7 @@ footer {
         margin: 5px;
         min-width: 200px;
     }
-*/
+*/      
     footer {
         margin: 1em;
     }
@@ -414,9 +500,25 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
 
     a {
         transition: 400ms;
+       
     }
 
+
+/*
     #menuToggle {
+        display: flex;
+   
+        flex-direction: column;
+        position: absolute;
+        top: 25%;
+        left: 33%;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+
+    }*/
+
+        #menuToggle {
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -425,6 +527,7 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         z-index: 1;
         -webkit-user-select: none;
         user-select: none;
+        
 
     }
 
@@ -442,7 +545,7 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         position: absolute;
         cursor: pointer;
         opacity: 0;
-        z-index: 2;
+        z-index: 3;
 
     }
 
@@ -501,6 +604,7 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
         height: 275px;
         box-shadow: 0 0 10px #4e1b3e;
         margin: -10% 0% 0% -47%;
+        -webkit-font-smoothing: antialiased;
         padding: 20px;
         padding-top: 20px;
         transform-origin: 0% 0%;
@@ -564,11 +668,19 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
 
 
 
+    /*galerie media only*/
 
+    .gallery img {
+        max-width: 96px;
+    }
 
+    .lightbox img {
+        max-width: 90%;
+    }
 
-
-
+    .lightbox {
+        background-color:#c2f9ffe2;
+    }
 
     .mediaonly {
         display: flex;
@@ -580,43 +692,6 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
 
 
 
-/* pour la galerie */
-
-div.gallery {
-    border: 5px solid var(--favorite-color);
-    justify-content: space-between;
-    align-content: space-between;
-
-}
-
-div.gallery:hover {
-    transform: scale(1.5);
-    /* this scales up the image when you hover over it */
-    object-fit: contain;
-    /* this keeps the aspect ratio of the original images*/
-
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 10px;
-    text-align: center;
-}
 
 
 
-.responsive {
-    padding: px 2px;
-    float: left;
-    width: 24.99999%;
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
