@@ -12,7 +12,7 @@
     --stripe-color: #ffc4d8;
     --stripe-color2: #feb5d0;
     scroll-behavior: smooth;
-    
+
 }
 
 
@@ -148,9 +148,7 @@ a {
 
 }
 
-.mediaonly {
-    display: none;
-}
+
 
 a:visited {
     color: var(--text-color);
@@ -276,7 +274,7 @@ footer {
 /*anchor links pour naviguer dans la page proprement*/
 
 #contactinfo {
-    scroll-margin-top:15px;
+    scroll-margin-top: 15px;
 }
 
 #formulaire {
@@ -292,7 +290,7 @@ footer {
     display: flex;
     gap: 10px;
     justify-content: center;
-  
+
     flex-wrap: wrap;
 }
 
@@ -307,7 +305,7 @@ footer {
 }
 
 .gallery img:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -320,7 +318,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color:#c2f9ff;
+    background-color: #c2f9ff;
 
     justify-content: center;
     align-items: center;
@@ -337,11 +335,11 @@ footer {
 .lightbox .close,
 .lightbox .prev,
 .lightbox .next {
-    position:absolute;
+    position: absolute;
     font-size: 30px;
-    color:#e27e97;
+    color: #e27e97;
     cursor: pointer;
-    background-color:rgba(245, 245, 245, 0.811);
+    background-color: rgba(245, 245, 245, 0.811);
 
     border: none;
     font-weight: bold;
@@ -361,15 +359,16 @@ footer {
 }
 
 .lightbox .next {
-    
+
     right: 20px;
     top: 50%;
     transform: translate(-50%);
 }
 
 
-
-
+.mediaonly {
+    display: none;
+}
 
 
 
@@ -385,13 +384,13 @@ footer {
         justify-content: center;
     }
 
-  
+
 
     main>h2 {
         font-size: 1.2em;
     }
 
- 
+
 
     header {
         position: sticky;
@@ -438,15 +437,16 @@ footer {
         display: flex;
         justify-content: center;
         margin: 10px;
-        
+
     }
-/*
+
+    /*
     #avatar {
         margin: 0 1em;
 
     }
         */
-/*
+    /*
     #bio {
         width: 80%;
     }
@@ -463,7 +463,7 @@ footer {
         margin: .2em;
     }
 
-/*
+    /*
     #sidebar ul {
         display: flex;
         flex-wrap: wrap;
@@ -481,7 +481,7 @@ footer {
         margin: 5px;
         min-width: 200px;
     }
-*/      
+*/
     footer {
         margin: 1em;
     }
@@ -492,145 +492,6 @@ footer {
         font-size: small;
 
     }
-
-    /* Menu hamburger dynamique ?
-pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme transition */
-
-
-
-    a {
-        transition: 400ms;
-       
-    }
-
-
-/*
-    #menuToggle {
-        display: flex;
-   
-        flex-direction: column;
-        position: absolute;
-        top: 25%;
-        left: 33%;
-        z-index: 1;
-        -webkit-user-select: none;
-        user-select: none;
-
-    }*/
-
-        #menuToggle {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 25%;
-        left: 33%;
-        z-index: 1;
-        -webkit-user-select: none;
-        user-select: none;
-        
-
-    }
-
-
-
-/*la hitbox du bouton*/
-    #menuToggle input {
-
-        display: flex;
-        justify-content: center;
-        top: -3%;
-        left: -2.9%;
-        width: 40px;
-        height: 32px;
-        position: absolute;
-        cursor: pointer;
-        opacity: 0;
-        z-index: 3;
-
-    }
-
-    #menuToggle span {
-        display: flex;
-        justify-content: center;
-        width: 29px;
-        height: 2px;
-        margin-bottom: 5px;
-        position: relative;
-        background: #c3385b;
-        border-radius: 3px;
-        z-index: 1;
-        transform-origin: 5px 0px;
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-            opacity 0.55s ease;
-
-    }
-
-    #menuToggle span:first-child {
-        transform-origin: 0% 0%;
-
-    }
-
-    #menuToggle span:nth-last-child(2) {
-        transform-origin: 0% 100%;
-    }
-
-    #menuToggle input:checked~span {
-        opacity: 1;
-        transform: rotate(45deg) translate(-3px, -1px);
-        background: #c3385b;
-    }
-
-    #menuToggle input:checked~span:nth-last-child(3) {
-
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-    }
-
-    #menuToggle input:checked~span:nth-last-child(2) {
-        transform: rotate(-45deg) translate(0, -1px);
-
-    }
-
-    #menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-image: linear-gradient(45deg, var(--stripe-color) 25%, var(--stripe-color2) 25%, var(--stripe-color2) 50%, var(--stripe-color) 50%, var(--stripe-color) 75%, var(--stripe-color2) 75%, var(--stripe-color2) 100%);
-        background-size: 65.05px 65.05px;
-        position: relative;
-        top: 0;
-        width: 350px;
-        height: 275px;
-        box-shadow: 0 0 10px #4e1b3e;
-        margin: -10% 0% 0% -47%;
-        -webkit-font-smoothing: antialiased;
-        padding: 20px;
-        padding-top: 20px;
-        transform-origin: 0% 0%;
-        transform: translate(-200%, 0%);
-        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, );
-        font-size: large;
-
-    }
-
-    #menu li {
-
-        transition-delay: 2s;
-    }
-
-    
-    #menuToggle input:checked~ul {
-        transform: none;
-    }
-
-/*Faire disparaître le menu quand on clique sur un lien*/
-
-.menugone {
-    
-}
-
-
 
 
 
@@ -656,15 +517,15 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
 
     }
 
-/*anchor links pour naviguer dans la page proprement*/
+    /*anchor links pour naviguer dans la page proprement*/
 
-#contactinfo {
-    scroll-margin-top:170px;
-}
+    #contactinfo {
+        scroll-margin-top: 170px;
+    }
 
-#formulaire {
-    scroll-margin-top: 170px;
-}
+    #formulaire {
+        scroll-margin-top: 170px;
+    }
 
 
 
@@ -679,19 +540,55 @@ pas hyper convaincue par le fait de faire sortir de l'écran puis rentrer comme 
     }
 
     .lightbox {
-        background-color:#c2f9ffe2;
+        background-color: #c2f9ffe2;
     }
 
     .mediaonly {
         display: flex;
     }
 
+    
+.hamburger {
+
+    position: fixed;
+    z-index: 2;
+    top: 105px;
+    left: 45%;
+    padding: 4px;
+    background-color: #fdb3cc;
+    cursor: pointer;
+
+}
+
+.closeIcon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateY(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: linear-gradient(45deg, var(--stripe-color) 25%, var(--stripe-color2) 25%, var(--stripe-color2) 50%, var(--stripe-color) 50%, var(--stripe-color) 75%, var(--stripe-color2) 75%, var(--stripe-color2) 100%);
+    background-size: 65.05px 65.05px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+.menuItem {
+    display: flex; 
+    font-size: 1.8em;
+    color: #4e1b3e;
+    text-decoration: none;
+}
+
+.showMenu {
+    transform: translateY(0);
 }
 
 
-
-
-
-
-
-
+}
