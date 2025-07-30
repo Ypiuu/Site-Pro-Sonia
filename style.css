@@ -1,7 +1,7 @@
 /* these are the main colors and header image
    replace them with anything you want! */
 :root {
-    --header-bg: url('images/IMG_4881.jpeg');
+    --header-bg: url('images/Général/IMG_4881.jpeg');
     --accent-color: #e27e97;
     --link-color: #c3385b;
     --bg-color: #fdb3cc;
@@ -12,6 +12,7 @@
     --stripe-color: #ffc4d8;
     --stripe-color2: #feb5d0;
     scroll-behavior: smooth;
+ 
 
 }
 
@@ -63,7 +64,8 @@ header {
     /*max-width: 980px;*/
     margin: 0 auto;
     border-top: 4px solid var(--text-color);
-    border-bottom: 4px solid var(--text-color);
+    border-bottom: 4px solid;
+    border-bottom-color:#c3385b;
     /* i have a default border-radius set, but i didn't want rounded corners on this element */
     border-radius: 0;
     display: flex;
@@ -86,11 +88,11 @@ header>h1 {
 
 }
 
+
 /*enlève le soulignement des liens titres*/
 body>h2 {
     text-decoration: none;
 }
-
 
 
 nav {
@@ -149,7 +151,6 @@ a {
 }
 
 
-
 a:visited {
     color: var(--text-color);
 }
@@ -206,19 +207,7 @@ ul {
     border-radius: 1.5em;
 }
 
-#bio {
-    display: none;
-    margin: 1em;
-    background: var(--favorite-color);
-    border: 2px solid var(--text-color);
-    box-shadow: var(--accent-color) 4px 4px;
-    text-shadow: var(--bg-color2) 0 0 2px;
-    font-size: 0.9em;
-}
 
-#bio p {
-    margin: 1em;
-}
 
 #content {
     display: flex;
@@ -273,14 +262,16 @@ footer {
 
 /*anchor links pour naviguer dans la page proprement*/
 
-#contactinfo {
+#contactinfo, 
+#formulaire, 
+#accueil, 
+#tattooPics, 
+#flashDispo, 
+#tattooCicatrisé,
+#illustration
+{
     scroll-margin-top: 15px;
 }
-
-#formulaire {
-    scroll-margin-top: 15px;
-}
-
 
 
 
@@ -318,8 +309,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #c2f9ff;
-
+    background-color: #000000d6;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -337,7 +327,7 @@ footer {
 .lightbox .next {
     position: absolute;
     font-size: 30px;
-    color: #e27e97;
+    color: #000000;
     cursor: pointer;
     background-color: rgba(245, 245, 245, 0.811);
 
@@ -366,7 +356,7 @@ footer {
 }
 
 
-.mediaonly {
+.mobileonly {
     display: none;
 }
 
@@ -384,18 +374,20 @@ footer {
         justify-content: center;
     }
 
-
-
-    main>h2 {
-        font-size: 1.2em;
+    .computeronly {
+        display: none;
     }
 
 
-
     header {
+        background-image: none;
+        background: linear-gradient(#c2f9ff, #c2f9ff00);
+        border: none;
+        border-bottom-left-radius: 5%;
+        border-bottom-right-radius: 5%;
         position: sticky;
         top: 0;
-        min-height: 120px;
+        min-height: 100px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -404,53 +396,119 @@ footer {
 
     }
 
-    header>nav {
+
+
+
+
+    .sticky {
+        position: sticky;
+        top: 19%;
+
+    }
+
+    #button-menu {
         display: flex;
         justify-content: center;
-        position: sticky;
-        z-index: 1;
+        align-self: center;
+        align-items: center;
+        width: 6em;
+        height: 2em;
+        padding: 5px 10px;
+        margin-bottom: 1em;
+
+
     }
 
-    header>h1 {
-        font-size: 2em;
-        margin: .3em;
+    #navbarre {
+        display: flex;
+
     }
 
-    .map {
-        min-width: 90%;
-        min-height: 100%;
-    }
-
-    .computeronly {
+    #navigation {
         display: none;
     }
 
-    nav>ul {
+    nav {
         /* this stuff makes it wrap around on mobile */
         display: flex;
         justify-content: center;
+        align-items: center;
+        justify-content: center;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: 1rem;
+        background-image: linear-gradient(45deg, var(--stripe-color) 25%, var(--stripe-color2) 25%, var(--stripe-color2) 50%, var(--stripe-color) 50%, var(--stripe-color) 75%, var(--stripe-color2) 75%, var(--stripe-color2) 100%);
+        background-size: 65.05px 65.05px;
+        margin: 1.5em;
+        padding: 0em 3.5em 0.5em 3.5em;
+        margin-bottom: 1.5em;
+        border: 2px solid var(--text-color);
+        box-shadow: var(--accent-color) 4px 4px;
+
+
     }
+
+    nav>h1 {
+        font-size: 1.3em;
+    }
+
+
+    nav>ul {
+        display: flex;
+        min-width: 50%;
+        max-width: 50%;
+        margin: auto;
+        line-height: 3rem;
+        /* this line takes away the dot in front of the list items */
+        list-style-type: none;
+        /* list items have default padding but we don't need it for these */
+        padding-left: 0;
+        /* and this spaces out the buttons so they're not touching */
+        justify-content: space-evenly;
+    }
+
+
 
     nav li>a {
         display: flex;
+        flex: 1;
+        background-color: var(--favorite-color);
+        box-shadow: var(--accent-color) 4px 4px;
+        padding: 5px 30%;
+        text-decoration: wavy;
         justify-content: center;
+        align-content: space-evenly;
         margin: 10px;
+        min-width: 100%;
+        max-width: 100%
+    }
+
+
+    nav li>a:hover {
+        box-shadow: var(--text-color) 4px 4px;
+    }
+
+    a {
+
+        color: var(--link-color);
+        border-radius: .3em;
+        text-shadow: var(--bg-color) 1px 1px 2px;
+        font-weight: bold;
+        transition: background-color 400ms ease-out;
 
     }
 
-    /*
-    #avatar {
-        margin: 0 1em;
+    a:visited {
+        color: var(--text-color);
+    }
 
+    a:hover {
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        padding: 2px;
     }
-        */
-    /*
-    #bio {
-        width: 80%;
-    }
-        */
+
 
     main {
 
@@ -463,25 +521,12 @@ footer {
         margin: .2em;
     }
 
-    /*
-    #sidebar ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 5px;
-        min-width: 200px;
-        font-size: larger;
 
+    main>h2 {
+        font-size: 1.2em;
     }
 
-    #sidebar li {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 5px;
-        min-width: 200px;
-    }
-*/
+
     footer {
         margin: 1em;
     }
@@ -494,28 +539,19 @@ footer {
     }
 
 
-
     #sidebar {
         display: none;
 
     }
 
-    #sidebarsmart {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-image: linear-gradient(45deg, var(--stripe-color) 25%, var(--stripe-color2) 25%, var(--stripe-color2) 50%, var(--stripe-color) 50%, var(--stripe-color) 75%, var(--stripe-color2) 75%, var(--stripe-color2) 100%);
-        background-size: 65.05px 65.05px;
-        min-width: 50px;
-        max-width: 50px;
-        min-height: 15px;
-        max-height: 15px;
-        margin: 1em;
-        padding: 1em;
-        border: 2px solid var(--text-color);
-        box-shadow: var(--accent-color) 4px 4px;
 
+    .map {
+        min-width: 90%;
+        min-height: 100%;
     }
+
+
+
 
     /*anchor links pour naviguer dans la page proprement*/
 
@@ -527,6 +563,14 @@ footer {
         scroll-margin-top: 170px;
     }
 
+    #accueil {
+        scroll-margin-top: 170px;
+    }
+
+
+    .mobileonly {
+        display: flex;
+    }
 
 
     /*galerie media only*/
@@ -538,57 +582,6 @@ footer {
     .lightbox img {
         max-width: 90%;
     }
-
-    .lightbox {
-        background-color: #c2f9ffe2;
-    }
-
-    .mediaonly {
-        display: flex;
-    }
-
-    
-.hamburger {
-
-    position: fixed;
-    z-index: 2;
-    top: 105px;
-    left: 45%;
-    padding: 4px;
-    background-color: #fdb3cc;
-    cursor: pointer;
-
-}
-
-.closeIcon {
-    display: none;
-}
-
-.menu {
-    position: fixed;
-    transform: translateY(-100%);
-    transition: transform 0.2s;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background-image: linear-gradient(45deg, var(--stripe-color) 25%, var(--stripe-color2) 25%, var(--stripe-color2) 50%, var(--stripe-color) 50%, var(--stripe-color) 75%, var(--stripe-color2) 75%, var(--stripe-color2) 100%);
-    background-size: 65.05px 65.05px;
-    list-style: none;
-    padding-top: 20px;
-}
-
-.menuItem {
-    display: flex; 
-    font-size: 1.8em;
-    color: #4e1b3e;
-    text-decoration: none;
-}
-
-.showMenu {
-    transform: translateY(0);
-}
 
 
 }

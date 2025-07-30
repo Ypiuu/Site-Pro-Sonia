@@ -8,7 +8,7 @@
     <meta name="author" content="Sonia Péray">
     <meta name="description" content="[write about your site here!]">
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 
 </head>
 
@@ -16,25 +16,26 @@
 
     <header>
 
-        <h1>Sonia Péray Tattoo</h1>
+        <h1 class="computeronly">Sonia Péray Tatouages</h1>
+
+
+        <div class="sticky">
+
+
+            <nav id="navbarre" class="mobileonly">
+                <h1>Sonia Péray Tattoo</h1>
+                <button id="button-menu" class="mobileonly" onclick="openCloseMenu()">menu</button>
+                <ul id="navigation">
+                    <li><a href="#accueil" onclick="openCloseMenu()">accueil</a></li>
+                    <li><a href="galerie.html" onclick="openCloseMenu()">galerie</a></li>
+                    <li><a href="#formulaire" onclick="openCloseMenu()">formulaire</a></li>
+                    <li><a href="#contactinfo" onclick="openCloseMenu()">contact</a></li>
+
+                </ul>
+            </nav>
+        </div>
 
     </header>
-
-    
-        <ul class="menu">
-            <li> <a class="menuItem" href="index.html">Accueil</a></li>
-            <li> <a class="menuItem" href="galerie.html">Galerie</a></li>
-            <li> <a class="menuItem" href="index.html#formulaire">Formulaire</a></li>
-            <li> <a class="menuItem" href="index.html#contact">Contact</a></li>
-
-        </ul>
-        <button class="hamburger">
-
-            <i class="menuIcon material-symbols-outlined">menu</i>
-            <i class="closeIcon material-symbols-outlined">close</i>
-
-        </button>
-
 
 
 
@@ -42,13 +43,10 @@
 
         <div id="sidebar" class="sidebarsticky">
             <div id="avatar">
-                <img src="images/Icone.PNG" alt="my icon!">
+                <img src="images//Général/Icone.PNG" alt="my icon!">
             </div>
 
-            <div id="bio">
-                <p>Hello, je m'appelle Sonia, je suis une tatoueuse à Lausanne dans les styles illustratif, cute et
-                    coloré. Écris-moi pour parler de ton projet !</p>
-            </div>
+
 
             <nav class="computeronly">
                 <ul>
@@ -66,31 +64,31 @@
 
         <main>
 
-            <h2 class="center">❤︎ Découvre mon univers ❤︎</h2>
+            <h2 class="center" id="accueil">❤︎ Découvre mon univers ❤︎</h2>
             <p>Bienvenue sur mon site internet !</p>
             <p>Je voulais un petit coin à moi que je pouvais personnaliser comme je le souhaitais et ne pas dépendre
                 uniquement des grandes plateformes.</p>
             <p>Si la démarche te plaît, check les <a href="ressources.html">ressources</a> que j'ai utilisées pour le
                 réaliser !</p>
 
-            <h2 class="center"><a href="galerie.html">galerie</a></h2>
+            <h2 class="center"><a href="galerie.html">❤︎ Galerie ❤︎</a></h2>
 
-            <p>here's where you can put some other text. very exciting.</p>
-            <p>remember to replace the links with pages you want to show people!</p>
-            <h4>common pages people make:</h4>
+            <p>insérer un preview de la galerie ici peut-être</p>
+
+
             <ul>
-                <li>about</li>
-                <li>blog</li>
-                <li>gallery</li>
-                <li>links in/out</li>
+                <li>galerie tattoo</li>
+                <li>galerie flash</li>
+                <li>galerie cicatrisé</li>
+                <li>galerie illustration</li>
             </ul>
-            <p>add whatever makes sense for your site~ link to all your things!!!</p>
+            <p>un ptit texte pour prendre rdv en remplissant le formulaire en dessous par ex</p>
 
 
             <h2 class="center" id="formulaire">❤︎ Formulaire de contact ❤︎</h2>
             <iframe src="https://framaforms.org/sonia-peray-tattoo-1752073466" width="100%" height="900"
                 border="0"></iframe>
-            <h2 class="center">infos et faq</h2>
+
 
 
 
@@ -115,9 +113,9 @@
                 <li>Kofi</li>
             </ul>
 
-            <h2 class="center"> <a href="ressources.html">ressources</a></h2>
+            <h2 class="center"> <a href="ressources.html">❤︎ ressources ❤︎</a></h2>
 
-            <h2>credits</h2>
+
             <p>template from <a href="https://nomnomnami.com">NomnomNami</a>!</p>
 
             <p>i mostly learned css by playing with <a href="https://goblin-heart.net/sadgrl/projects/layout-builder/"
@@ -129,6 +127,10 @@
     </div>
 
     <footer>© 2025 Sonia Péray</footer>
+
+    <script src="script.js"></script>
 </body>
+
+
 
 </html>

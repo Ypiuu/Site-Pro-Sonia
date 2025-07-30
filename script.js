@@ -2,29 +2,29 @@
 
 //sélection des éléments
 
-const galleryImages = document.querySelectorAll('.gallery img'); 
-const lightbox = document.querySelector('.lightbox'); 
+const galleryImages = document.querySelectorAll('.gallery img');
+const lightbox = document.querySelector('.lightbox');
 const lightboxImage = document.querySelector('.lightbox-image');
 const closeBtn = document.querySelector('.close');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
-let currentIndex = 0; 
+let currentIndex = 0;
 
 //fonction pour ouvrir la lightbox
 
 const openLightbox = (index) => {
-    currentIndex = index ;
+    currentIndex = index;
     lightbox.style.display = 'flex';
     updateLightboxImage();
-} ;
+};
 
 
 //fonction pour mettre à jour l'image de la lb
 
 const updateLightboxImage = () => {
-    lightboxImage.src = galleryImages[currentIndex].src; 
-    lightboxImage.alt = galleryImages[currentIndex].alt; 
-}; 
+    lightboxImage.src = galleryImages[currentIndex].src;
+    lightboxImage.alt = galleryImages[currentIndex].alt;
+};
 
 //fonction pour fermer la lightbox
 
@@ -36,7 +36,7 @@ const closeLightbox = () => {
 //fonction pour aller à l'image précédente
 
 const showPrevImage = () => {
-    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length; 
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
     updateLightboxImage();
 };
 
@@ -73,69 +73,31 @@ lightbox.addEventListener('click', (e) => {
 
 
 
-//Menu déroulant hamburger
 
-const menu = document.querySelector(".menu");
-const menuItems = document.querySelectorAll(".menuItem");
-const hamburger = document.querySelector(".hamburger");
-const closeIcon = document.querySelector(".closeIcon");
-const menuIcon = document.querySelector(".menuIcon");
 
-functiontoggleMenu() {
-    if (menu.classList.contains("showMenu")) {
-        menu.classList.remove("showMenu");
-        closeIcon.style.display = "none";
-        menuIcon.style.display = "block";
-    } else {
-        menu.classList.add("showMenu"); 
-        closeIcon.style.display = "block";
-        menuIcon.style.display = "none";
+//script pour le menu en vue mobile
+
+
+
+function openCloseMenu() {
+
+    var navigation = document.getElementById('navigation');
+
+
+    if (navigation.style.display === 'none' || navigation.style.display === '') {
+        navigation.style.display = 'block';
+
+
+
     }
-}
+    else {
 
-hamburger.addEventListener("click", toggleMenu);
 
-menuItems.forEach(
-    function(menuItem) {
-        menuItem.addEventListener("click", toggleMenu);
+        navigation.style.display = 'none';
+
+
+
     }
-)
 
-
-
-
-
-
-
-
-/*// MODAL 
-
-//get the modal
-let modal = document.getElementById("myModal"); 
-
-// get the button that opens the modal
-let btn = document.getElementById("myBtn"); 
-
-// get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// when the user clicks on the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
 }
-
-// when the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none"; 
-}
-
-//when the user clicks anywhere outside the modal, close it
-window.onclick = function(event) {
-    if(event.target == modal) {
-        modal.style.display = "none"; 
-    }
-}
-
-*/
-
 
