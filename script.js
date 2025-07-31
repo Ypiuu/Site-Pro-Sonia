@@ -73,7 +73,16 @@ lightbox.addEventListener('click', (e) => {
 
 
 
-
+//projet script pour afficher 10 images à la fois
+//
+//compter le nmbr d'images et numéro (index?)
+//déterminer la moitié
+//
+//
+//
+//
+//
+//
 
 //script pour le menu en vue mobile
 
@@ -100,4 +109,7 @@ function openCloseMenu() {
     }
 
 }
+
+
+
 

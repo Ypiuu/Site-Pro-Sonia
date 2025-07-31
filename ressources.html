@@ -1,49 +1,141 @@
-<!-- NOTE DE RESSOURCES
-
-Remerciement
-Loïc qui m'a beaucoup aidée et soutenue 
-
-
-Framework / Layout
-
-https://nomnomnami.com/
-
-https://sadgrlonline.github.io/archived-sadgrl.online/webmastery/layouts/
 
 
 
-Pour la galerie
+<!DOCTYPE html>
+<html lang="en">
 
-https://codepen.io/max131/pen/gOgXXpb
-
-https://technely.com/creer-une-lightbox-moderne-avec-html-css-et-javascript/
-
-https://compress-images.com/compress-png
-
-
-
-Pour le menu déroulant
-
-https://www.raphaelbeaudet.com/creer-un-menu-responsive-uniquement-en-html-css 
-
-https://codepen.io/shieldsma91/pen/zLpbLX
-
-https://fonts.google.com/icons?selected=Material+Symbols+Outlined:menu:FILL@0;wght@400;GRAD@0;opsz@24&icon.size=24&icon.color=%23e3e3e3
-
-https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonia Péray Tattoo</title>
+    <meta name="author" content="Sonia Péray">
+    <meta name="description" content="[write about your site here!]">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
 
 
-Pour la navigation
+</head>
 
-https://codersblock.com/blog/anchor-links-and-how-to-make-them-awesome/
+<body>
 
+    <header>
 
-
-Pour les questions générales et les bugs 
-
-https://stackoverflow.com/questions
+        <h1 class="computeronly">Sonia Péray Tatouages</h1>
 
 
+        <div class="sticky">
 
 
--->
+            <nav id="navbarre" class="mobileonly">
+                <h1>Sonia Péray Tattoo</h1>
+                <button id="button-menu" class="mobileonly" onclick="openCloseMenu()">menu</button>
+                <ul id="navigation">
+                    <li><a href="index.html#accueil" onclick="openCloseMenu()">accueil</a></li>
+                    <li><a href="galerie.html" onclick="openCloseMenu()">galerie</a></li>
+                    <li><a href="#formulaire" onclick="openCloseMenu()">formulaire</a></li>
+                    <li><a href="#contactinfo" onclick="openCloseMenu()">contact</a></li>
+                    <li><a href="ressources.html" onclick="openCloseMenu()">ressources</a></li>
+                    <li><a href="blog.html" onclick="openCloseMenu()">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+
+
+    <div id="content">
+
+        <div id="sidebar" class="sidebarsticky">
+            <div id="avatar">
+                <img src="images//Général/Icone.PNG" alt="my icon!">
+            </div>
+
+
+
+            <nav class="computeronly">
+                <ul>
+                    <li><a href="index.html">accueil</a></li>
+                    <li><a href="galerie.html">galerie</a></li>
+                    <li><a href="info.html">info & FAQ</a></li>
+                    <li><a href="#contactinfo">contact</a></li>
+                    <li><a href="#formulaire">formulaire</a></li>
+                    <li><a href="ressources.html">ressources</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
+
+        <main>
+
+
+            <h1 class="center"> ❤︎ Ressources ❤︎</h2>
+
+                <h3>Tatouage</h3>
+                <p>mettre les consignes de tattoo et des infos</p>
+                <p>mettre les fiches formulaires de consentement et fiche de soin</p>
+
+
+
+                <h3>Création de site internet</h3>
+
+                <p>Je voulais un petit coin à moi que je pouvais personnaliser comme je le souhaitais et ne pas dépendre
+                    uniquement des grandes plateformes.</p>
+                <p>Il y a plein de ressources gratuites en lignes, j'ai listé ici
+                    celles que j'ai utilisées. <br><br>Un grand merci à Loïc pour son aide aussi, t'es le meilleur :)
+                </p>
+
+
+                <h4>Framework / Layout</h4>
+
+                <a href="https://nomnomnami.com/">nomnomnami.com/</a>
+                <br><br>
+                <a
+                    href="https://sadgrlonline.github.io/archived-sadgrl.online/webmastery/layouts/">sadgrlonline.github.io</a>
+                <br><br>
+
+                <h4>Galerie</h4>
+
+                <a href="https://codepen.io/max131/pen/gOgXXpb">codepen.io</a>
+                <br><br>
+                <a href="https://technely.com/creer-une-lightbox-moderne-avec-html-css-et-javascript/">technely.com</a>
+                <br><br>
+                <a href="https://compress-images.com/compress-png">compress-images.com</a>
+                <br><br><br>
+
+                <h4>Menus déroulants</h4>
+
+                <a href="https://codepen.io/shieldsma91/pen/zLpbLX">codepen.io/shieldsma91/pen/zLpbLX</a>
+                <br><br>
+                <a href=" https://fonts.google.com">fonts.google.com</a>
+                <br><br>
+                <a href="https://dev.to/ljcdev/easy-hamburger-menu-with-js-2do0">dev.to</a>
+                <br><br>
+
+                <h4>Navigation</h4>
+
+                <a href="https://codersblock.com/blog/anchor-links-and-how-to-make-them-awesome/">codersblock.com</a>
+                <br><br>
+
+                <h4>Général</h4>
+                <a href="https://www.w3schools.com/">www.w3schools.com/</a>
+                <a href="https://stackoverflow.com/questions">https://stackoverflow.com/questions</a>
+                <br><br>
+                <br><br>
+
+
+
+
+                <small>last update: 10/07/2025</small>
+        </main>
+
+    </div>
+
+    <footer>© 2025 Sonia Péray</footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>

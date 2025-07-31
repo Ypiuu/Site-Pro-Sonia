@@ -403,6 +403,8 @@ footer {
     .sticky {
         position: sticky;
         top: 19%;
+        min-width: 100%;
+        max-width: 100%;
 
     }
 
@@ -422,6 +424,8 @@ footer {
     #navbarre {
         display: flex;
 
+
+
     }
 
     #navigation {
@@ -431,6 +435,9 @@ footer {
     nav {
         /* this stuff makes it wrap around on mobile */
         display: flex;
+        top: 0;
+        left: 0;
+
         justify-content: center;
         align-items: center;
         justify-content: center;
@@ -450,7 +457,8 @@ footer {
     }
 
     nav>h1 {
-        font-size: 1.3em;
+        font-size: 2rem;
+
     }
 
 
@@ -549,7 +557,6 @@ footer {
         min-width: 90%;
         min-height: 100%;
     }
-
 
 
 
