@@ -162,12 +162,20 @@ a:hover {
 
 /* you can change this to anything you want :) */
 ul {
+
     list-style-type: "❤︎ ";
 }
 
 .sidebarsticky {
     position: sticky;
     top: 4%;
+
+}
+
+#rsicones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 
 }
 
@@ -242,7 +250,13 @@ main>h3 {
 
 /* a class for centering text and images */
 .center {
+
     text-align: center;
+    align-items: center;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 footer {
@@ -270,7 +284,7 @@ footer {
 #tattooCicatrisé,
 #illustration
 {
-    scroll-margin-top: 15px;
+    scroll-margin-top: 150px;
 }
 
 
@@ -278,15 +292,19 @@ footer {
 /* pour la galerie */
 
 .gallery {
+
     display: flex;
     gap: 10px;
     justify-content: center;
-
     flex-wrap: wrap;
+
+
+
 }
 
 .gallery img {
-    width: 100%;
+
+    width: 100%;    
     max-width: 120px;
     height: auto;
     object-fit: cover;
@@ -381,7 +399,8 @@ footer {
 
     header {
         background-image: none;
-        background: linear-gradient(#c2f9ff, #c2f9ff00);
+        background: linear-gradient( #c2f9ff,#c2f9ffed,#c2f9ff00) ;
+        
         border: none;
         border-bottom-left-radius: 5%;
         border-bottom-right-radius: 5%;
@@ -410,6 +429,7 @@ footer {
 
     #button-menu {
         display: flex;
+        background-color:#c2f9ffb3;
         justify-content: center;
         align-self: center;
         align-items: center;
@@ -417,6 +437,9 @@ footer {
         height: 2em;
         padding: 5px 10px;
         margin-bottom: 1em;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        
+        font-weight: bolder;
 
 
     }
@@ -580,10 +603,12 @@ footer {
     }
 
 
+
     /*galerie media only*/
 
+
     .gallery img {
-        max-width: 96px;
+        max-width: 80px;
     }
 
     .lightbox img {
