@@ -72,6 +72,36 @@ lightbox.addEventListener('click', (e) => {
 });
 
 
+ 
+
+
+
+lightboxImage.addEventListener('touchstart', function (event) {
+    touchstartX = event.changedTouches[0].screenX;
+
+}, false);
+
+lightboxImage.addEventListener('touchend', function (event) {
+    touchendX = event.changedTouches[0].screenX;
+   
+    handleGesture();
+}, false);
+
+const handleGesture = () => {
+    if (touchendX < touchstartX) {
+        showPrevImage;
+    }
+
+    if (touchendX > touchstartX) {
+        showNextImage;
+    }
+ 
+    }
+    
+   
+
+
+
 
 
 //projet script pour afficher 10 images à la fois
