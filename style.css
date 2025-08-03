@@ -23,8 +23,9 @@
 }
 
 .divider img {
-    min-width: 50%;
-    max-width: 50%;
+    min-width: 100%;
+    max-width: 100%;
+
 }
 
 /* you can get hex codes from sites like this:
