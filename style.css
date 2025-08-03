@@ -61,6 +61,12 @@ p {
     line-height: 1.5em;
 }
 
+small {
+    display: flex;
+    justify-content: right;
+    font-size: 0.6em;
+}
+
 header {
 
     background-color: var(--accent-color);
@@ -208,6 +214,13 @@ ul {
 
 }
 
+.todownload {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+
+}
+
 #supportMeSection {
     display: flex;
     justify-content: center;
@@ -347,7 +360,12 @@ footer {
 #tattooPics,
 #flashDispo,
 #tattooCicatrisé,
-#illustration {
+#illustration, 
+#TatouageClientexs, 
+#TatouageGénéral, 
+#Collègues, 
+#CréationSite, 
+#SitesCute {
     scroll-margin-top: 150px;
 }
 
