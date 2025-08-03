@@ -60,6 +60,7 @@ galleryImages.forEach((img, index) => {
 closeBtn.addEventListener('click', closeLightbox);
 prevBtn.addEventListener('click', showPrevImage);
 nextBtn.addEventListener('click', showNextImage);
+//ajouter ici des évent qui trigger les fonctions mais avec du swipe ?
 
 
 //fermer la lightbox en cliquant hors de l'image

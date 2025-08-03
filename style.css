@@ -12,7 +12,7 @@
     --stripe-color: #ffc4d8;
     --stripe-color2: #feb5d0;
     scroll-behavior: smooth;
- 
+
 
 }
 
@@ -39,7 +39,7 @@
 body {
     background-color: var(--bg-color2);
     margin: 0;
-    font-size: 1em;
+    font-size: 1.3em;
 }
 
 .corps {
@@ -65,7 +65,7 @@ header {
     margin: 0 auto;
     border-top: 4px solid var(--text-color);
     border-bottom: 4px solid;
-    border-bottom-color:#c3385b;
+    border-bottom-color: #c3385b;
     /* i have a default border-radius set, but i didn't want rounded corners on this element */
     border-radius: 0;
     display: flex;
@@ -144,7 +144,7 @@ a {
     text-decoration: none;
     color: var(--link-color);
     border-radius: .3em;
-    text-shadow: var(--bg-color) 1px 1px 2px;
+    text-shadow: var(--bg-color) 1px 1px 3px;
     font-weight: bold;
     transition: background-color 400ms ease-out;
 
@@ -175,8 +175,60 @@ ul {
 #rsicones {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 3rem;
 
+}
+
+#rsicones a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: none;
+    border-radius: 0.3em;
+    transition: 150ms;
+
+}
+
+#rsicones a:hover {
+    background-color: #feb5d0;
+    color: none;
+
+}
+
+#supportMeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#supportMeSection a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#supportMeSection a:hover {
+
+    background-color: #e27e9700;
+    color: none;
+    text-decoration: none;
+    border-radius: none;
+    text-shadow: #4e1b3e00 1px 1px 3px;
+    font-weight: none;
+    transition: background-color 400ms ease-out;
+
+}
+
+#buttonKofi img {
+    min-width: 50%;
+    max-width: 50%;
+    height: auto;
+}
+
+#buttonReview img {
+    min-width: 50%;
+    max-width: 50%;
+    height: auto;
 }
 
 
@@ -256,7 +308,7 @@ main>h3 {
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 footer {
@@ -276,14 +328,13 @@ footer {
 
 /*anchor links pour naviguer dans la page proprement*/
 
-#contactinfo, 
-#formulaire, 
-#accueil, 
-#tattooPics, 
-#flashDispo, 
+#contactinfo,
+#formulaire,
+#accueil,
+#tattooPics,
+#flashDispo,
 #tattooCicatrisé,
-#illustration
-{
+#illustration {
     scroll-margin-top: 150px;
 }
 
@@ -304,7 +355,7 @@ footer {
 
 .gallery img {
 
-    width: 100%;    
+    width: 100%;
     max-width: 120px;
     height: auto;
     object-fit: cover;
@@ -399,8 +450,8 @@ footer {
 
     header {
         background-image: none;
-        background: linear-gradient( #c2f9ff,#c2f9ffed,#c2f9ff00) ;
-        
+        background: linear-gradient(#c2f9ff, #c2f9ffed, #c2f9ff00);
+
         border: none;
         border-bottom-left-radius: 5%;
         border-bottom-right-radius: 5%;
@@ -429,7 +480,7 @@ footer {
 
     #button-menu {
         display: flex;
-        background-color:#c2f9ffb3;
+        background-color: #c2f9ffb3;
         justify-content: center;
         align-self: center;
         align-items: center;
@@ -437,8 +488,8 @@ footer {
         height: 2em;
         padding: 5px 10px;
         margin-bottom: 1em;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-        
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+
         font-weight: bolder;
 
 
@@ -612,7 +663,51 @@ footer {
     }
 
     .lightbox img {
-        max-width: 90%;
+        max-width: 80%;
+        height: auto;
+    }
+
+
+    .lightbox{
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+
+    .lightbox .close,
+    .lightbox .prev,
+    .lightbox .next {
+        position: absolute;
+        font-size: 50px;
+        color: #000000;
+        cursor: pointer;
+        background-color: rgba(245, 245, 245, 0.811);
+
+        border: none;
+        font-weight: bold;
+    }
+
+    .lightbox .close {
+        padding: 0px 15px;
+        top: 15%;
+        right: 5%;
+
+    }
+
+    .lightbox .prev {
+
+        left: 5%;
+        top: 80%;
+        transform: translate(50%);
+    }
+
+    .lightbox .next {
+
+        right:5%;
+        top: 80%;
+        transform: translate(-50%);
     }
 
 
