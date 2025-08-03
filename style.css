@@ -16,7 +16,16 @@
 
 }
 
+.divider {
+    display: flex;
+    justify-content: center;
 
+}
+
+.divider img {
+    min-width: 50%;
+    max-width: 50%;
+}
 
 /* you can get hex codes from sites like this:
    https://palettes.shecodes.io/    
@@ -150,10 +159,13 @@ a {
 
 }
 
-
-a:visited {
+h2>a {
     color: var(--text-color);
+
 }
+
+
+
 
 a:hover {
     background-color: var(--accent-color);
@@ -339,6 +351,29 @@ footer {
 }
 
 
+.galerieAccueil {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+.galerieAccueil img {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5px;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
 
 /* pour la galerie */
 
@@ -395,11 +430,11 @@ footer {
 .lightbox .prev,
 .lightbox .next {
     position: absolute;
-    font-size: 30px;
+    font-size: 50px;
     color: #000000;
     cursor: pointer;
     background-color: rgba(245, 245, 245, 0.811);
-
+    padding: 0px 15px;
     border: none;
     font-weight: bold;
 }
@@ -657,6 +692,16 @@ footer {
 
     /*galerie media only*/
 
+    .galerieAccueil img {
+        display: flex;
+        justify-content: center;
+
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+
+    }
+
 
     .gallery img {
         max-width: 80px;
@@ -668,7 +713,7 @@ footer {
     }
 
 
-    .lightbox{
+    .lightbox {
         width: 100%;
         height: 100%;
     }
@@ -697,15 +742,15 @@ footer {
     }
 
     .lightbox .prev {
-
+        padding: 0px 15px;
         left: 5%;
         top: 80%;
         transform: translate(50%);
     }
 
     .lightbox .next {
-
-        right:5%;
+        padding: 0px 15px;
+        right: 5%;
         top: 80%;
         transform: translate(-50%);
     }
