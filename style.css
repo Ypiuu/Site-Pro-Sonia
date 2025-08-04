@@ -84,7 +84,7 @@ header>h1 {
     border-radius: .3em;
     max-width: 100%;
     padding: 12px 15%;
-    font-size: 3.5em;
+    font-size: 2.5em;
     /* you can change the text-align to center or right if you want it placed differently */
     text-align: center;
     background-color: var(--bg-color);
