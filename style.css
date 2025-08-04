@@ -16,17 +16,7 @@
 
 }
 
-.divider {
-    display: flex;
-    justify-content: center;
 
-}
-
-.divider img {
-    min-width: 100%;
-    max-width: 100%;
-
-}
 
 /* you can get hex codes from sites like this:
    https://palettes.shecodes.io/    
@@ -257,6 +247,19 @@ ul {
     height: auto;
 }
 
+
+.divider {
+    display: flex;
+    justify-content: center;
+
+}
+
+.divider img {
+    min-width: 80%;
+    max-width: 100%;
+    margin: 0% 10%;
+
+}
 
 #sidebar {
     /* made the stripe bg with a generator:
