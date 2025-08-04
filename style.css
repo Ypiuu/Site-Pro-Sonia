@@ -731,6 +731,10 @@ footer {
         scroll-margin-top: 170px;
     }
 
+#flashDispo {
+    scroll-margin-top: 170px;
+}
+
 
     .mobileonly {
         display: flex;
