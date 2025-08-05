@@ -235,7 +235,7 @@ ul {
 
 }
 
-#buttonKofi , 
+#buttonKofi,
 #buttonReview {
     display: flex;
     flex-direction: column;
@@ -244,14 +244,14 @@ ul {
     justify-content: center;
 
 
-    
+
 
 }
 
 
-#buttonKofi p , 
+#buttonKofi p,
 #buttonReview p {
- font-size: small;
+    font-size: small;
 }
 
 
@@ -389,11 +389,11 @@ footer {
 #tattooPics,
 #flashDispo,
 #tattooCicatrisé,
-#illustration, 
-#TatouageClientexs, 
-#TatouageGénéral, 
-#Collègues, 
-#CréationSite, 
+#illustration,
+#TatouageClientexs,
+#TatouageGénéral,
+#Collègues,
+#CréationSite,
 #SitesCute {
     scroll-margin-top: 150px;
 }
@@ -696,12 +696,6 @@ footer {
         margin: 1em;
     }
 
-    .responsive {
-        width: 49.9999999;
-        margin: 1px 0px;
-        font-size: small;
-
-    }
 
 
     #sidebar {
@@ -711,7 +705,7 @@ footer {
 
 
     .map {
-        min-width: 90%;
+        min-width: 80%;
         min-height: 100%;
     }
 
@@ -731,9 +725,9 @@ footer {
         scroll-margin-top: 170px;
     }
 
-#flashDispo {
-    scroll-margin-top: 170px;
-}
+    #flashDispo {
+        scroll-margin-top: 170px;
+    }
 
 
     .mobileonly {
