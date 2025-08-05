@@ -145,8 +145,7 @@ nav li>a:hover {
 }
 
 a {
-            display: flex;
-        flex-wrap: wrap;
+
     text-decoration: none;
     color: var(--link-color);
     border-radius: .3em;
