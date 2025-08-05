@@ -278,12 +278,14 @@ ul {
     display: flex;
     justify-content: center;
 
+
+
 }
 
 .divider img {
-    min-width: 80%;
-    max-width: 100%;
-    margin: 0% 10%;
+    min-width: 70%;
+    max-width: 70%;
+
 
 }
 
