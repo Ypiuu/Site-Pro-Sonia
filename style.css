@@ -145,6 +145,8 @@ nav li>a:hover {
 }
 
 a {
+            display: flex;
+        flex-wrap: wrap;
     text-decoration: none;
     color: var(--link-color);
     border-radius: .3em;
@@ -182,8 +184,8 @@ ul {
 #rsicones {
     display: flex;
     justify-content: center;
- align-items: center;
- max-width: 100%;
+    align-items: center;
+    max-width: 100%;
     gap: 3rem;
 
 }
