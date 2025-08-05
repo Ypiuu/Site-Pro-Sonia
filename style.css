@@ -676,8 +676,8 @@ footer {
 
 
     main {
-display: block;
-max-width: 90%;
+        display: block;
+        max-width: 90%;
 
 
     }
@@ -706,7 +706,8 @@ max-width: 90%;
 
 
     .map {
-        min-width: 80%;
+        min-width: 70%;
+        max-width: 80%;
         min-height: 100%;
     }
 
