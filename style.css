@@ -42,9 +42,7 @@ body {
     font-size: 1.3em;
 }
 
-.corps {
-    width: 800px;
-}
+
 
 /* i think having better line spacing helps text to be more readable, but you can remove it if you want */
 p {
@@ -678,8 +676,9 @@ footer {
 
 
     main {
+display: block;
+max-width: 90%;
 
-        margin: 0 1em;
 
     }
 
