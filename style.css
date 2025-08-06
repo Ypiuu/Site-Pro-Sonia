@@ -184,8 +184,8 @@ ul {
     display: flex; 
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 3rem;
     
 
 
@@ -717,6 +717,17 @@ footer {
         min-height: 100%;
     }
 
+    #rsicones {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    
+
+
+}
 
 
     /*anchor links pour naviguer dans la page proprement*/
